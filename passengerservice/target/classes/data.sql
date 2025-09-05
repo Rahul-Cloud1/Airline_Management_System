@@ -1,0 +1,11 @@
+INSERT INTO Passengers (id, name, email_id) VALUES (201, 'Rahul Jangir', 'rahul@gmail.com');
+INSERT INTO Passengers (id, name, email_id) VALUES (202, 'Viraj Yadav', 'viraj@gmail.com');
+INSERT INTO Passengers (id, name, email_id) VALUES (203, 'Priya Singh', 'priya@gmail.com');
+INSERT INTO Passengers (id, name, email_id) VALUES (204, 'Sneha Gupta', 'sneha@gmail.com');
+INSERT INTO Passengers (id, name, email_id) VALUES (205, 'Amit Kumar', 'amit@gmail.com');
+INSERT INTO Passengers (id, name, email_id) VALUES (206, 'Neha Sharma', 'neha@gmail.com');  
+INSERT INTO Passengers (id, name, email_id) VALUES (207, 'Rohit Verma', 'rohit@gmail.com');
+INSERT INTO Passengers (id, name, email_id) VALUES (208, 'Anjali Mehta', 'anjali@gmail.com');
+INSERT INTO Passengers (id, name, email_id) VALUES (209, 'Karan Patel', 'karan@gmail.com');
+INSERT INTO Passengers (id, name, email_id) VALUES (210, 'Simran Kaur', 'simran@gmail.com');
+INSERT INTO Passengers (id, name, email_id) VALUES (211, 'Vikram Joshi', 'vikram@gmail.com');

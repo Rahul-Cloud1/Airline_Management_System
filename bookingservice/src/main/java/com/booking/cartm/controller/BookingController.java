@@ -1,0 +1,40 @@
+package com.booking.cartm.controller;
+
+import java.util.List;
+import org.springframework.web.bind.annotation.*;
+import com.booking.cartm.models.Booking;
+import com.booking.cartm.services.BookingService;
+
+@RestController
+@RequestMapping("/bookings")
+public class BookingController {
+
+    private final BookingService service;
+
+    public BookingController(BookingService service) {
+        this.service = service;
+    }
+
+    @GetMapping("/all")
+    public List<Booking> getAllBookings() {
+        return service.getAllBookings();
+    }
+
+    @GetMapping("/{id}")
+    public Booking getBookingById(@PathVariable Long id) {
+        return service.getBookingById(id);
+    }
+
+    @PostMapping("/add")
+    public String addBooking(@RequestBody Booking b) {
+        int result = service.saveBooking(b);
+        boolean success = result > 0;
+        return success ? "Booking added successfully!" : "Failed to add booking!";
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public String deleteBooking(@PathVariable Long id) {
+        boolean success = service.deleteBooking(id);
+        return success ? "Booking deleted successfully!" : "Booking not found!";
+    }
+}
