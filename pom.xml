@@ -10,6 +10,8 @@
         <module>flightservice</module>
         <module>passengerservice</module>
         <module>bookingservice</module>
+        <module>apigateway</module>
+        <module>eurekaserver</module>
 
     </modules>
 </project>

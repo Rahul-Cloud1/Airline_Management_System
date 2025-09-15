@@ -1,5 +1,8 @@
+C:\Users\admin\Desktop\Airline_Project\Airline\passengerservice\src\main\java\com\passenger\cartm\models\PassengerDetailsDTO.java
 C:\Users\admin\Desktop\Airline_Project\Airline\passengerservice\src\main\java\com\passenger\cartm\PassengerServiceApplication.java
 C:\Users\admin\Desktop\Airline_Project\Airline\passengerservice\src\main\java\com\passenger\cartm\models\Passenger.java
+C:\Users\admin\Desktop\Airline_Project\Airline\passengerservice\src\main\java\com\passenger\cartm\clients\BookingServiceClient.java
+C:\Users\admin\Desktop\Airline_Project\Airline\passengerservice\src\main\java\com\passenger\cartm\clients\FlightServiceClient.java
 C:\Users\admin\Desktop\Airline_Project\Airline\passengerservice\src\main\java\com\passenger\cartm\repository\PassengerDAO.java
 C:\Users\admin\Desktop\Airline_Project\Airline\passengerservice\src\main\java\com\passenger\cartm\services\PassengerService.java
 C:\Users\admin\Desktop\Airline_Project\Airline\passengerservice\src\main\java\com\passenger\cartm\controller\PassengerController.java

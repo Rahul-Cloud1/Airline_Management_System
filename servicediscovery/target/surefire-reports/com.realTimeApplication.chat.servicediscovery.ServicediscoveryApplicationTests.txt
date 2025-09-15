@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.realTimeApplication.chat.servicediscovery.ServicediscoveryApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.86 s -- in com.realTimeApplication.chat.servicediscovery.ServicediscoveryApplicationTests

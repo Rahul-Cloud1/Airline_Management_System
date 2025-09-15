@@ -1,8 +1,18 @@
 package com.booking.cartm.controller;
 
 import java.util.List;
-import org.springframework.web.bind.annotation.*;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.booking.cartm.models.Booking;
+import com.booking.cartm.models.BookingDetailsDTO;
 import com.booking.cartm.services.BookingService;
 
 @RestController
@@ -15,6 +25,10 @@ public class BookingController {
         this.service = service;
     }
 
+    @GetMapping("/passenger/{passengerId}")
+    public List<Booking> getBookingsByPassengerId(@PathVariable Long passengerId) {
+        return service.getBookingsByPassengerId(passengerId);
+    }
     @GetMapping("/all")
     public List<Booking> getAllBookings() {
         return service.getAllBookings();
@@ -36,5 +50,24 @@ public class BookingController {
     public String deleteBooking(@PathVariable Long id) {
         boolean success = service.deleteBooking(id);
         return success ? "Booking deleted successfully!" : "Booking not found!";
+    }
+    
+        @PutMapping("/update/{id}")
+        public String updateBooking(@PathVariable Long id, @RequestBody Booking updatedBooking) {
+            boolean success = service.updateBooking(id, updatedBooking);
+            return success ? "Booking updated successfully!" : "Booking not found!";
+        }
+    
+    @GetMapping("/flight/{flightId}")
+    public Object getFlightDetails(@PathVariable Long flightId) {
+        return service.getFlightDetails(flightId);
+    }
+
+    /**
+     * Returns all bookings with passenger name and flight locations
+     */
+    @GetMapping("/all/details")
+    public List<BookingDetailsDTO> getAllBookingDetails() {
+        return service.getAllBookingDetails();
     }
 }

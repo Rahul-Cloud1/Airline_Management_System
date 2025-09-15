@@ -1,16 +1,27 @@
+
 package com.flight.cartm.models;
+
+import java.time.LocalDateTime;
 
 public class Flight {
     private Long id;
-    private String name;
-    private int quantity;
+    private String flightNumber;
+    private String origin;
+    private String destination;
+    private LocalDateTime departureTime;
+    private LocalDateTime arrivalTime;
+    private Integer seatsAvailable;
 
     public Flight() {}
 
-    public Flight(Long id, String name, int quantity) {
+    public Flight(Long id, String flightNumber, String origin, String destination, LocalDateTime departureTime, LocalDateTime arrivalTime, Integer seatsAvailable) {
         this.id = id;
-        this.name = name;
-        this.quantity = quantity;
+        this.flightNumber = flightNumber;
+        this.origin = origin;
+        this.destination = destination;
+        this.departureTime = departureTime;
+        this.arrivalTime = arrivalTime;
+        this.seatsAvailable = seatsAvailable;
     }
 
     public Long getId() {
@@ -20,17 +31,45 @@ public class Flight {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFlightNumber() {
+        return flightNumber;
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setFlightNumber(String flightNumber) {
+        this.flightNumber = flightNumber;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public String getOrigin() {
+        return origin;
     }
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setOrigin(String origin) {
+        this.origin = origin;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+    public LocalDateTime getDepartureTime() {
+        return departureTime;
+    }
+    public void setDepartureTime(LocalDateTime departureTime) {
+        this.departureTime = departureTime;
+    }
+
+    public LocalDateTime getArrivalTime() {
+        return arrivalTime;
+    }
+    public void setArrivalTime(LocalDateTime arrivalTime) {
+        this.arrivalTime = arrivalTime;
+    }
+
+    public Integer getSeatsAvailable() {
+        return seatsAvailable;
+    }
+    public void setSeatsAvailable(Integer seatsAvailable) {
+        this.seatsAvailable = seatsAvailable;
     }
 }

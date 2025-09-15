@@ -1,32 +1,66 @@
+
 package com.booking.cartm.models;
+
+import java.time.LocalDateTime;
 
 public class Booking {
     private Long id;
-    private String flightNumber;
-    private String passengerName;
+    private Long passengerId;
+    private Long flightId;
+    private LocalDateTime bookingDate;
+    private String seatNumber;
+    private String status;
 
-    // Getters and Setters
+    public Booking() {}
+
+    public Booking(Long id, Long passengerId, Long flightId, LocalDateTime bookingDate, String seatNumber, String status) {
+        this.id = id;
+        this.passengerId = passengerId;
+        this.flightId = flightId;
+        this.bookingDate = bookingDate;
+        this.seatNumber = seatNumber;
+        this.status = status;
+    }
+
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
 
-    public String getFlightNumber() {
-        return flightNumber;
+    public Long getPassengerId() {
+        return passengerId;
+    }
+    public void setPassengerId(Long passengerId) {
+        this.passengerId = passengerId;
     }
 
-    public void setFlightNumber(String flightNumber) {
-        this.flightNumber = flightNumber;
+    public Long getFlightId() {
+        return flightId;
+    }
+    public void setFlightId(Long flightId) {
+        this.flightId = flightId;
     }
 
-    public String getPassengerName() {
-        return passengerName;
+    public LocalDateTime getBookingDate() {
+        return bookingDate;
+    }
+    public void setBookingDate(LocalDateTime bookingDate) {
+        this.bookingDate = bookingDate;
     }
 
-    public void setPassengerName(String passengerName) {
-        this.passengerName = passengerName;
+    public String getSeatNumber() {
+        return seatNumber;
+    }
+    public void setSeatNumber(String seatNumber) {
+        this.seatNumber = seatNumber;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
