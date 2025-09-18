@@ -1,7 +1,16 @@
 package com.flight.cartm.controller;
 
 import java.util.List;
-import org.springframework.web.bind.annotation.*;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.flight.cartm.models.Flight;
 import com.flight.cartm.services.FlightService;
 
@@ -36,4 +45,10 @@ public class FlightController {
         boolean success = service.deleteFlight(id);
         return success ? "Flight deleted successfully!" : "Flight not found!";
     }
+
+        @PutMapping("/update/{id}")
+        public String updateFlight(@PathVariable Long id, @RequestBody Flight f) {
+            Flight updated = service.updateFlight(id, f);
+            return updated != null ? "Flight Updated successfully!" : "Flight not found!";
+        }
 }

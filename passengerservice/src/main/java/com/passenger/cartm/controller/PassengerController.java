@@ -23,6 +23,7 @@ public class PassengerController {
     public List<PassengerDetailsDTO> getAllPassengerDetails() {
         return service.getAllPassengerDetails();
     }
+    
 
     private final PassengerService service;
 

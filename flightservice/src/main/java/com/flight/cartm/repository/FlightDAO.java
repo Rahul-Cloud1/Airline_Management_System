@@ -33,6 +33,10 @@ public class FlightDAO {
         return result.isEmpty() ? null : result.get(0);
     }
 
+    public int updateById(Long id, Flight f) {
+        String sql = "UPDATE FLIGHT SET flight_number = ?, origin = ?, destination = ?, departure_time = ?, arrival_time = ?, seats_available = ? WHERE id = ?";
+        return jdbcTemplate.update(sql, f.getFlightNumber(), f.getOrigin(), f.getDestination(), f.getDepartureTime(), f.getArrivalTime(), f.getSeatsAvailable(), id);
+    }
     public int save(Flight f) {
         String sql = "INSERT INTO FLIGHT (flight_number, origin, destination, departure_time, arrival_time, seats_available) VALUES (?, ?, ?, ?, ?, ?)";
         return jdbcTemplate.update(sql, f.getFlightNumber(), f.getOrigin(), f.getDestination(), f.getDepartureTime(), f.getArrivalTime(), f.getSeatsAvailable());
