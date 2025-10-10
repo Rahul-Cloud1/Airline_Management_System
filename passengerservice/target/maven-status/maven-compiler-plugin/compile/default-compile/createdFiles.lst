@@ -1,4 +1,8 @@
+com\passenger\cartm\models\PassengerDetailsDTO$BookingInfo.class
 com\passenger\cartm\PassengerServiceApplication.class
+com\passenger\cartm\clients\BookingServiceClient.class
+com\passenger\cartm\models\PassengerDetailsDTO.class
+com\passenger\cartm\clients\FlightServiceClient.class
 com\passenger\cartm\models\Passenger.class
 com\passenger\cartm\repository\PassengerDAO.class
 com\passenger\cartm\services\PassengerService.class

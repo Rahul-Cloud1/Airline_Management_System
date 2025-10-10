@@ -36,8 +36,10 @@ public class PassengerService {
             List<Map<String, Object>> bookings = new ArrayList<>();
             try {
                 Object bookingsObj = bookingServiceClient.getBookingsByPassengerId(p.getId());
-                if (bookingsObj instanceof List) {
-                    bookings = (List<Map<String, Object>>) bookingsObj;
+                if (bookingsObj instanceof List<?>) {
+                    @SuppressWarnings("unchecked")
+                    List<Map<String, Object>> safeBookings = (List<Map<String, Object>>) bookingsObj;
+                    bookings = safeBookings;
                 }
             } catch (Exception e) { /* handle error */ }
 
@@ -52,8 +54,10 @@ public class PassengerService {
                 Map<String, Object> flight = null;
                 try {
                     Object flightObj = flightServiceClient.getFlightById(((Number) booking.getOrDefault("flightId", 0)).longValue());
-                    if (flightObj instanceof Map) {
-                        flight = (Map<String, Object>) flightObj;
+                    if (flightObj instanceof Map<?, ?>) {
+                        @SuppressWarnings("unchecked")
+                        Map<String, Object> safeFlight = (Map<String, Object>) flightObj;
+                        flight = safeFlight;
                     }
                 } catch (Exception e) { /* handle error */ }
                 if (flight != null) {

@@ -24,12 +24,22 @@ public class BookingService {
             // Fetch passenger details
             Map<String, Object> passenger = null;
             try {
-                passenger = (Map<String, Object>) passengerServiceClient.getPassengerById(booking.getPassengerId());
+                Object passengerObj = passengerServiceClient.getPassengerById(booking.getPassengerId());
+                if (passengerObj instanceof Map) {
+                    @SuppressWarnings("unchecked")
+                    Map<String, Object> safePassenger = (Map<String, Object>) passengerObj;
+                    passenger = safePassenger;
+                }
             } catch (Exception e) { /* handle error */ }
             // Fetch flight details
             Map<String, Object> flight = null;
             try {
-                flight = (Map<String, Object>) flightServiceClient.getFlightById(booking.getFlightId());
+                Object flightObj = flightServiceClient.getFlightById(booking.getFlightId());
+                if (flightObj instanceof Map) {
+                    @SuppressWarnings("unchecked")
+                    Map<String, Object> safeFlight = (Map<String, Object>) flightObj;
+                    flight = safeFlight;
+                }
             } catch (Exception e) { /* handle error */ }
 
             BookingDetailsDTO dto = new BookingDetailsDTO();
