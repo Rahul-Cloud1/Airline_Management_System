@@ -13,5 +13,7 @@
         <module>apigateway</module>
         <module>eurekaserver</module>
 
+        <module>configurationserver</module>
+
     </modules>
 </project>
