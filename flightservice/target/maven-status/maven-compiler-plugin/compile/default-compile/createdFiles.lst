@@ -1,5 +1,6 @@
-com\flight\cartm\models\Flight.class
-com\flight\cartm\repository\FlightDAO.class
 com\flight\cartm\services\FlightService.class
 com\flight\cartm\controller\FlightController.class
+com\flight\cartm\models\Flight.class
+com\flight\cartm\config\SecurityConfig.class
+com\flight\cartm\repository\FlightDAO.class
 com\flight\cartm\FlightServiceApplication.class

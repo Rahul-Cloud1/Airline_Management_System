@@ -1,6 +1,3 @@
-# Eureka Server
-
-This module runs the Eureka Service Registry for service discovery.
-
-- Start this server before other services.
-- Access dashboard at http://localhost:8761
+Rahul Jangir 22csu385 Passenger Service / Eureka Server
+Viraj Yadav 22csu399  Booking  Service  / Configuration Server
+Tushar 22csu 22csu452 Flight Service / Authen

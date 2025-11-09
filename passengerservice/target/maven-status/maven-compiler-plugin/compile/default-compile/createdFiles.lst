@@ -6,4 +6,5 @@ com\passenger\cartm\clients\FlightServiceClient.class
 com\passenger\cartm\models\Passenger.class
 com\passenger\cartm\repository\PassengerDAO.class
 com\passenger\cartm\services\PassengerService.class
+com\passenger\cartm\config\SecurityConfig.class
 com\passenger\cartm\controller\PassengerController.class

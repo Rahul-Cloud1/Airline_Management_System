@@ -11,11 +11,12 @@ public class ConfigurationserverApplication {
 	public static void main(String[] args) {
 		SpringApplication app = new SpringApplication(ConfigurationserverApplication.class);
 
+		// Default to native (classpath) config unless CONFIG_MODE is explicitly set to 'git'.
 		String mode = System.getenv("CONFIG_MODE");
-		if("native".equalsIgnoreCase(mode)){
-			app.setAdditionalProfiles("native");
+		if ("git".equalsIgnoreCase(mode)) {
+			app.setAdditionalProfiles("git");
 		} else {
-			app.setAdditionalProfiles("git");			
+			app.setAdditionalProfiles("native");
 		}
 		app.run(args);
 	}

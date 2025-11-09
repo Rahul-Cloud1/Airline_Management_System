@@ -1,2 +1,3 @@
 com\gateway\ApiGatewayApplication.class
+com\gateway\config\SecurityConfig.class
 com\gateway\GatewayConfig.class

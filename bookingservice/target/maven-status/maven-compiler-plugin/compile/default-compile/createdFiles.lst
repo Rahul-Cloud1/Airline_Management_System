@@ -5,4 +5,5 @@ com\booking\cartm\controller\BookingController.class
 com\booking\cartm\clients\FlightServiceClient.class
 com\booking\cartm\models\BookingDetailsDTO.class
 com\booking\cartm\repository\BookingDAO.class
+com\booking\cartm\config\SecurityConfig.class
 com\booking\cartm\BookingServiceApplication.class
